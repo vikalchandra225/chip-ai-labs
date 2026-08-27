@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CHIP AI LABS — AI, VLSI and semiconductor innovation.">
+  <meta name="description" content="CHIP AI LABS — AI, VLSI and semiconductor innovation, solutions, products, training and mentorship.">
+  <meta name="theme-color" content="#030712">
   <title>CHIP AI LABS | Designing Intelligence. Powering Tomorrow.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,14 +16,16 @@
 
   <header class="nav">
     <a class="brand" href="#home" aria-label="CHIP AI LABS home">
-      <span class="brand-mark">C</span>
-      <span>CHIP <b>AI LABS</b></span>
+      <img class="brand-logo" src="assets/chip-ai-labs-logo.png" alt="CHIP AI LABS">
     </a>
-    <button class="menu-btn" aria-label="Open menu">☰</button>
+
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+
     <nav>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#vision">Vision</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#training">Training</a>
+      <a href="#products">Products</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -36,23 +39,40 @@
           Building the next generation of AI and chip technology through practical
           engineering, learning and innovation.
         </p>
+
         <div class="coming">
           <span class="pulse"></span>
           <strong>COMING SOON</strong>
         </div>
+
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Stay Connected</a>
-          <a class="btn ghost" href="#services">Explore</a>
+          <a class="btn ghost" href="#solutions">Explore</a>
         </div>
+
         <div class="domain">chipailabs.in</div>
       </div>
 
-      <div class="hero-visual">
+      <div class="hero-visual" aria-hidden="true">
         <div class="orb"></div>
+        <div class="circuit c1"></div>
+        <div class="circuit c2"></div>
         <div class="chip">
-          <div class="chip-logo">C</div>
-          <div class="chip-title">CHIP<br><span>AI LABS</span></div>
-          <div class="chip-lines"></div>
+          <div class="chip-inner">
+            <div class="chip-logo">C</div>
+            <div class="chip-title">CHIP<br><span>AI LABS</span></div>
+            <div class="chip-core">
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <small>AI • VLSI • SEMICONDUCTORS</small>
+          </div>
+          <div class="pins top"></div>
+          <div class="pins bottom"></div>
+          <div class="pins left"></div>
+          <div class="pins right"></div>
         </div>
       </div>
     </section>
@@ -74,13 +94,15 @@
       </div>
     </section>
 
-    <section id="services" class="section">
-      <div class="section-label">02 / WHAT WE'RE BUILDING</div>
+    <section id="solutions" class="section">
+      <div class="section-label">02 / SOLUTIONS</div>
       <h2>Technology with <span>purpose.</span></h2>
+      <p class="section-intro">Engineering solutions for AI, semiconductor and digital technology challenges.</p>
+
       <div class="cards">
         <article class="card">
           <div class="icon">▣</div>
-          <h3>VLSI & Chip Design</h3>
+          <h3>VLSI &amp; Chip Design</h3>
           <p>Digital design, RTL, verification and semiconductor-focused engineering.</p>
         </article>
         <article class="card">
@@ -90,19 +112,76 @@
         </article>
         <article class="card">
           <div class="icon">⌁</div>
-          <h3>Learning & Mentorship</h3>
-          <p>Hands-on learning, mock interviews and 1:1 technical mentorship.</p>
+          <h3>Engineering Solutions</h3>
+          <p>Practical technical solutions, automation and innovation for real-world requirements.</p>
         </article>
         <article class="card">
           <div class="icon">↗</div>
-          <h3>Innovation Lab</h3>
+          <h3>Innovation &amp; R&amp;D</h3>
           <p>Turning ideas into prototypes, experiments and future-ready products.</p>
         </article>
       </div>
     </section>
 
+    <section id="training" class="section training">
+      <div class="section-label">03 / TRAINING</div>
+      <div class="two-col training-head">
+        <div>
+          <h2>Learn. <span>Build.</span> Grow.</h2>
+        </div>
+        <div>
+          <p>
+            Hands-on learning designed around practical engineering, technical
+            confidence and industry readiness.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-grid">
+        <div class="training-card">
+          <span>01</span>
+          <h3>VLSI Training</h3>
+          <p>Build strong foundations in digital design, RTL, verification and chip development.</p>
+        </div>
+        <div class="training-card">
+          <span>02</span>
+          <h3>AI &amp; Technology</h3>
+          <p>Learn practical AI concepts and apply them to engineering workflows and projects.</p>
+        </div>
+        <div class="training-card">
+          <span>03</span>
+          <h3>Mock Interviews</h3>
+          <p>Practice technical interviews with structured feedback and real-world preparation.</p>
+        </div>
+        <div class="training-card">
+          <span>04</span>
+          <h3>1:1 Mentorship</h3>
+          <p>Get focused guidance for projects, skills, career direction and technical growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products">
+      <div class="section-label">04 / PRODUCTS</div>
+      <div class="product-panel">
+        <div>
+          <div class="product-status"><span></span> BUILDING THE FUTURE</div>
+          <h2>Products that make <span>engineering smarter.</span></h2>
+          <p>
+            CHIP AI LABS is working toward AI-powered products and technology
+            platforms that connect intelligence with semiconductor and engineering workflows.
+          </p>
+        </div>
+        <div class="product-list">
+          <div><b>AI TOOLS</b><span>Intelligent engineering workflows</span></div>
+          <div><b>CHIP TECH</b><span>Semiconductor-focused solutions</span></div>
+          <div><b>AUTOMATION</b><span>Faster, smarter technical processes</span></div>
+        </div>
+      </div>
+    </section>
+
     <section id="vision" class="section vision">
-      <div class="section-label">03 / VISION</div>
+      <div class="section-label">05 / VISION</div>
       <div class="vision-box">
         <p class="quote">“The future belongs to those who build it.”</p>
         <div class="vision-grid">
@@ -114,7 +193,7 @@
     </section>
 
     <section id="contact" class="section contact">
-      <div class="section-label">04 / CONNECT</div>
+      <div class="section-label">06 / CONNECT</div>
       <h2>Something <span>big</span> is coming.</h2>
       <p>Stay tuned for the CHIP AI LABS launch.</p>
       <a class="btn primary" href="mailto:hello@chipailabs.in">hello@chipailabs.in</a>
