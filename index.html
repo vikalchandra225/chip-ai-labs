@@ -140,6 +140,104 @@ footer{
 }
 </style>
 
+
+<style id="mobile-header-final-fix">
+/* Mobile header: balanced logo, menu and CTA */
+@media (max-width:720px){
+  header.nav{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    padding:10px 14px!important;
+    min-height:72px!important;
+    box-sizing:border-box!important;
+  }
+  header.nav .brand{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  header.nav .brand-logo,
+  header.nav .brand img{
+    width:auto!important;
+    height:38px!important;
+    max-width:170px!important;
+    object-fit:contain!important;
+  }
+  header.nav .menu-btn{
+    flex:0 0 42px!important;
+    width:42px!important;
+    height:42px!important;
+    margin:0!important;
+    padding:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:50%!important;
+    font-size:0!important;
+    line-height:1!important;
+    background:rgba(6,18,35,.92)!important;
+    border:1px solid rgba(25,223,255,.25)!important;
+    color:#fff!important;
+  }
+  header.nav .menu-btn::before{
+    content:"☰";
+    font-size:22px;
+  }
+  header.nav .mobile-build-cta{
+    flex:0 0 auto!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    height:42px!important;
+    box-sizing:border-box!important;
+    margin:0!important;
+    padding:0 13px!important;
+    font-size:12px!important;
+    line-height:1!important;
+    border-radius:999px!important;
+    white-space:nowrap!important;
+  }
+  header.nav nav{
+    display:none!important;
+  }
+  header.nav .nav-build{
+    display:none!important;
+  }
+}
+@media (max-width:360px){
+  header.nav .brand-logo,
+  header.nav .brand img{max-width:145px!important;height:35px!important}
+  header.nav .menu-btn{flex-basis:40px;width:40px;height:40px}
+  header.nav .mobile-build-cta{height:40px;padding:0 10px;font-size:11px}
+}
+</style>
+
+
+<style id="mobile-build-before-menu">
+@media (max-width:720px){
+  header.nav{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+  }
+  header.nav .brand{
+    order:1!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+  }
+  header.nav .mobile-build-cta{
+    order:2!important;
+    flex:0 0 auto!important;
+  }
+  header.nav .menu-btn{
+    order:3!important;
+    flex:0 0 42px!important;
+  }
+}
+</style>
+
 </head>
 <body>
   <div class="grid-bg"></div>
