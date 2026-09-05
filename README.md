@@ -1,8 +1,3 @@
-# CHIP AI LABS
+CHIP AI LABS — redesigned premium single-page site.
 
-Responsive website for chipailabs.in.
-
-Navigation:
-Home | About | Solutions | Training | Products | Contact
-
-Deploy with GitHub Pages using the `main` branch and repository root.
+Content from the previous version is preserved. Contact and Careers are merged into one Connect & Careers section. The original logo remains the same and is also used as the favicon.

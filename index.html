@@ -9,9 +9,116 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
+  
+
+<style id="final-navigation-polish">
+/* Final navigation: one purpose per destination. "Let's Build" remains a CTA, not navigation. */
+nav a{white-space:nowrap}
+.hero .btn,.hero .cta,.hero a[class*="btn"]{letter-spacing:.01em}
+</style>
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<style id="startup-theme-reference">
+:root{
+  --ref-bg:#020812;--ref-panel:#061425;--ref-cyan:#19dfff;
+  --ref-blue:#247dff;--ref-text:#eef7ff;--ref-muted:#a9bacd;
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(900px 600px at 80% 12%,rgba(25,223,255,.12),transparent 60%),
+    radial-gradient(900px 650px at 10% 55%,rgba(36,125,255,.09),transparent 62%),
+    linear-gradient(145deg,#01040a,#06111f 52%,#02060d);
+  color:var(--ref-text);
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background-image:linear-gradient(rgba(25,223,255,.026) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(25,223,255,.026) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+body:after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(25,223,255,.12) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 76% 70%,rgba(36,125,255,.10) 0 1px,transparent 1.5px);
+  background-size:180px 180px,240px 240px;
+  opacity:.22;
+}
+header,.header,.navbar{
+  background:rgba(2,8,18,.82)!important;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(25,223,255,.10)!important;
+}
+.brand img,header .brand img,.navbar .brand img{
+  height:58px!important;width:auto!important;max-width:365px!important;object-fit:contain;
+}
+.hero,.hero-section{
+  min-height:680px;position:relative;overflow:hidden;
+}
+.hero:before,.hero-section:before{
+  content:"";position:absolute;right:-190px;top:-160px;width:700px;height:700px;
+  border-radius:50%;border:1px solid rgba(25,223,255,.13);
+  box-shadow:0 0 100px rgba(25,223,255,.08);
+}
+.hero:after,.hero-section:after{
+  content:"";position:absolute;right:-40px;top:60px;width:520px;height:520px;
+  border-radius:50%;background:radial-gradient(circle,rgba(25,223,255,.16),transparent 68%);
+  pointer-events:none;
+}
+.hero h1,.hero-section h1{
+  background:linear-gradient(100deg,#fff 10%,#d9f7ff 45%,var(--ref-cyan) 75%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.card,.service-card,.solution-card,.training-card,.product-card{
+  background:linear-gradient(145deg,rgba(7,25,44,.88),rgba(3,12,24,.76));
+  border:1px solid rgba(25,223,255,.16)!important;
+  box-shadow:0 18px 60px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.04);
+  backdrop-filter:blur(12px);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.card:hover,.service-card:hover,.solution-card:hover,.training-card:hover,.product-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(25,223,255,.42)!important;
+  box-shadow:0 25px 75px rgba(0,0,0,.42),0 0 34px rgba(25,223,255,.09);
+}
+section[id="products"],section[id="solutions"]{
+  background:linear-gradient(180deg,rgba(4,18,33,.30),rgba(2,8,17,.10));
+}
+section[id="products"] .card,section[id="solutions"] .card,
+section[id="products"] .product-card,section[id="solutions"] .solution-card{
+  border-color:rgba(25,223,255,.23)!important;
+}
+section[id="products"] h2,section[id="solutions"] h2{
+  text-shadow:0 0 32px rgba(25,223,255,.12);
+}
+nav a[href*="products"],nav a[href*="solutions"]{
+  font-weight:700;
+}
+.btn,.button,.cta,button{
+  border-radius:999px!important;
+}
+footer{
+  background:rgba(1,5,12,.88)!important;
+  border-top:1px solid rgba(25,223,255,.10);
+}
+@media(max-width:720px){
+  .brand img,header .brand img,.navbar .brand img{
+    height:40px!important;max-width:235px!important;
+  }
+  .hero,.hero-section{min-height:590px}
+  .hero:before,.hero-section:before{width:360px;height:360px;right:-190px;top:-70px}
+  .hero:after,.hero-section:after{width:280px;height:280px;right:-80px;top:45px}
+  body:before{background-size:38px 38px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+
 </head>
 <body>
   <div class="grid-bg"></div>
@@ -23,13 +130,12 @@
 
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#solutions">Solutions</a>
-      <a href="#training">Training</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <nav><a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#solutions">Solutions</a>
+<a href="#training">Training</a></nav>
+    <a class="nav-build" href="#connect">Let's Build <span>↗</span></a>
   </header>
 
   <main>
@@ -194,12 +300,27 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="section-label">06 / CONNECT</div>
-      <h2>Something <span>big</span> is coming.</h2>
-      <p>Stay tuned for the CHIP AI LABS launch.</p>
-      <a class="btn primary" href="mailto:hello@chipailabs.in">hello@chipailabs.in</a>
-      <div class="contact-domain">chipailabs.in</div>
+    <section id="connect" class="section connect">
+      <div class="section-label">06 / CONNECT &amp; CAREERS</div>
+      <div class="connect-wrap">
+        <div class="connect-copy">
+          <h2>Something <span>big</span> is coming.</h2>
+          <p>Stay tuned for the CHIP AI LABS launch.</p>
+          <a class="btn primary" href="mailto:hello@chipailabs.in">hello@chipailabs.in</a>
+          <div class="contact-domain">chipailabs.in</div>
+        </div>
+        <div class="career-card">
+          <div class="career-kicker">CAREERS</div>
+          <h3>Build the future with us.</h3>
+          <div class="career-status">HIRING SOON</div>
+          <p>Career opportunities at CHIP AI LABS will be announced soon. Stay connected for upcoming opportunities.</p>
+          <div class="career-art" aria-hidden="true">
+            <div class="career-chip"><span></span><span></span><span></span><span></span></div>
+            <div class="career-ring r1"></div><div class="career-ring r2"></div>
+            <i class="cdot cda"></i><i class="cdot cdb"></i><i class="cdot cdc"></i>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
