@@ -119,6 +119,27 @@ footer{
 }
 </style>
 
+
+<style id="mobile-build-cta">
+.mobile-build-cta{
+  display:none;
+  margin-left:auto;
+  padding:9px 14px;
+  border:1px solid rgba(25,223,255,.55);
+  border-radius:999px;
+  color:#fff!important;
+  background:linear-gradient(135deg,rgba(25,223,255,.20),rgba(36,125,255,.18));
+  box-shadow:0 0 22px rgba(25,223,255,.12);
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+  text-decoration:none;
+}
+@media(max-width:720px){
+  .mobile-build-cta{display:inline-flex;align-items:center;gap:6px}
+}
+</style>
+
 </head>
 <body>
   <div class="grid-bg"></div>
@@ -130,7 +151,8 @@ footer{
 
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
 
-    <nav><a href="#home">Home</a>
+    <a class="mobile-build-cta" href="#connect">Let’s Build <span aria-hidden="true">→</span></a>
+<nav><a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#products">Products</a>
 <a href="#solutions">Solutions</a>
