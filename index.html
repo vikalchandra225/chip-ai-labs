@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ChipAI LABS — AI, VLSI and semiconductor innovation, solutions, products, training and mentorship.">
+  <meta name="theme-color" content="#030712">
+  <title>ChipAI LABS | Designing Intelligence. Powering Tomorrow.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+
+<style id="final-navigation-polish">
+/* Final navigation: one purpose per destination. "Let's Build" remains a CTA, not navigation. */
+nav a{white-space:nowrap}
+.hero .btn,.hero .cta,.hero a[class*="btn"]{letter-spacing:.01em}
+</style>
+
+
+
+
+<style id="startup-theme-reference">
+:root{
+  --ref-bg:#020812;--ref-panel:#061425;--ref-cyan:#19dfff;
+  --ref-blue:#247dff;--ref-text:#eef7ff;--ref-muted:#a9bacd;
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(900px 600px at 80% 12%,rgba(25,223,255,.12),transparent 60%),
+    radial-gradient(900px 650px at 10% 55%,rgba(36,125,255,.09),transparent 62%),
+    linear-gradient(145deg,#01040a,#06111f 52%,#02060d);
+  color:var(--ref-text);
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background-image:linear-gradient(rgba(25,223,255,.026) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(25,223,255,.026) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+body:after{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(25,223,255,.12) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 76% 70%,rgba(36,125,255,.10) 0 1px,transparent 1.5px);
+  background-size:180px 180px,240px 240px;
+  opacity:.22;
+}
+header,.header,.navbar{
+  background:rgba(2,8,18,.82)!important;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(25,223,255,.10)!important;
+}
+.brand img,header .brand img,.navbar .brand img{
+  height:58px!important;width:auto!important;max-width:365px!important;object-fit:contain;
+}
+.hero,.hero-section{
+  min-height:680px;position:relative;overflow:hidden;
+}
+.hero:before,.hero-section:before{
+  content:"";position:absolute;right:-190px;top:-160px;width:700px;height:700px;
+  border-radius:50%;border:1px solid rgba(25,223,255,.13);
+  box-shadow:0 0 100px rgba(25,223,255,.08);
+}
+.hero:after,.hero-section:after{
+  content:"";position:absolute;right:-40px;top:60px;width:520px;height:520px;
+  border-radius:50%;background:radial-gradient(circle,rgba(25,223,255,.16),transparent 68%);
+  pointer-events:none;
+}
+.hero h1,.hero-section h1{
+  background:linear-gradient(100deg,#fff 10%,#d9f7ff 45%,var(--ref-cyan) 75%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.card,.service-card,.solution-card,.training-card,.product-card{
+  background:linear-gradient(145deg,rgba(7,25,44,.88),rgba(3,12,24,.76));
+  border:1px solid rgba(25,223,255,.16)!important;
+  box-shadow:0 18px 60px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.04);
+  backdrop-filter:blur(12px);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.card:hover,.service-card:hover,.solution-card:hover,.training-card:hover,.product-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(25,223,255,.42)!important;
+  box-shadow:0 25px 75px rgba(0,0,0,.42),0 0 34px rgba(25,223,255,.09);
+}
+section[id="products"],section[id="solutions"]{
+  background:linear-gradient(180deg,rgba(4,18,33,.30),rgba(2,8,17,.10));
+}
+section[id="products"] .card,section[id="solutions"] .card,
+section[id="products"] .product-card,section[id="solutions"] .solution-card{
+  border-color:rgba(25,223,255,.23)!important;
+}
+section[id="products"] h2,section[id="solutions"] h2{
+  text-shadow:0 0 32px rgba(25,223,255,.12);
+}
+nav a[href*="products"],nav a[href*="solutions"]{
+  font-weight:700;
+}
+.btn,.button,.cta,button{
+  border-radius:999px!important;
+}
+footer{
+  background:rgba(1,5,12,.88)!important;
+  border-top:1px solid rgba(25,223,255,.10);
+}
+@media(max-width:720px){
+  .brand img,header .brand img,.navbar .brand img{
+    height:40px!important;max-width:235px!important;
+  }
+  .hero,.hero-section{min-height:590px}
+  .hero:before,.hero-section:before{width:360px;height:360px;right:-190px;top:-70px}
+  .hero:after,.hero-section:after{width:280px;height:280px;right:-80px;top:45px}
+  body:before{background-size:38px 38px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}
+</style>
+
+
+<style id="mobile-build-cta">
+.mobile-build-cta{
+  display:none;
+  margin-left:auto;
+  padding:9px 14px;
+  border:1px solid rgba(25,223,255,.55);
+  border-radius:999px;
+  color:#fff!important;
+  background:linear-gradient(135deg,rgba(25,223,255,.20),rgba(36,125,255,.18));
+  box-shadow:0 0 22px rgba(25,223,255,.12);
+  font-size:12px;
+  font-weight:700;
+  white-space:nowrap;
+  text-decoration:none;
+}
+@media(max-width:720px){
+  .mobile-build-cta{display:inline-flex;align-items:center;gap:6px}
+}
+</style>
+
+
+<style id="mobile-header-final-fix">
+/* Mobile header: balanced logo, menu and CTA */
+@media (max-width:720px){
+  header.nav{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+    padding:10px 14px!important;
+    min-height:72px!important;
+    box-sizing:border-box!important;
+  }
+  header.nav .brand{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  header.nav .brand-logo,
+  header.nav .brand img{
+    width:auto!important;
+    height:38px!important;
+    max-width:170px!important;
+    object-fit:contain!important;
+  }
+  header.nav .menu-btn{
+    flex:0 0 42px!important;
+    width:42px!important;
+    height:42px!important;
+    margin:0!important;
+    padding:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:50%!important;
+    font-size:0!important;
+    line-height:1!important;
+    background:rgba(6,18,35,.92)!important;
+    border:1px solid rgba(25,223,255,.25)!important;
+    color:#fff!important;
+  }
+  header.nav .menu-btn::before{
+    content:"☰";
+    font-size:22px;
+  }
+  header.nav .mobile-build-cta{
+    flex:0 0 auto!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    height:42px!important;
+    box-sizing:border-box!important;
+    margin:0!important;
+    padding:0 13px!important;
+    font-size:12px!important;
+    line-height:1!important;
+    border-radius:999px!important;
+    white-space:nowrap!important;
+  }
+  header.nav nav{
+    display:none!important;
+  }
+  header.nav .nav-build{
+    display:none!important;
+  }
+}
+@media (max-width:360px){
+  header.nav .brand-logo,
+  header.nav .brand img{max-width:145px!important;height:35px!important}
+  header.nav .menu-btn{flex-basis:40px;width:40px;height:40px}
+  header.nav .mobile-build-cta{height:40px;padding:0 10px;font-size:11px}
+}
+</style>
+
+
+<style id="mobile-build-before-menu">
+@media (max-width:720px){
+  header.nav{
+    display:flex!important;
+    align-items:center!important;
+    gap:8px!important;
+  }
+  header.nav .brand{
+    order:1!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+  }
+  header.nav .mobile-build-cta{
+    order:2!important;
+    flex:0 0 auto!important;
+  }
+  header.nav .menu-btn{
+    order:3!important;
+    flex:0 0 42px!important;
+  }
+}
+</style>
+
+
+<style id="restore-old-mobile-menu">
+/* Restore the original clickable mobile menu behavior and styling. */
+@media (max-width:700px){
+  header.nav .menu-btn{
+    display:block!important;
+    position:relative!important;
+    z-index:1002!important;
+    flex:0 0 38px!important;
+    width:38px!important;
+    height:38px!important;
+    margin:0!important;
+    padding:0!important;
+    background:#071225!important;
+    border:1px solid rgba(120,164,220,.20)!important;
+    border-radius:8px!important;
+    color:#fff!important;
+    font-size:0!important;
+    cursor:pointer!important;
+    -webkit-tap-highlight-color:transparent!important;
+  }
+  header.nav .menu-btn::before{
+    content:"☰"!important;
+    display:block!important;
+    font-size:22px!important;
+    line-height:38px!important;
+    text-align:center!important;
+  }
+  header.nav nav{
+    display:none!important;
+    position:absolute!important;
+    top:70px!important;
+    left:0!important;
+    right:0!important;
+    z-index:1001!important;
+    padding:20px 7vw!important;
+    background:rgba(2,5,11,.98)!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:18px!important;
+    border-bottom:1px solid rgba(120,164,220,.20)!important;
+  }
+  header.nav nav.open{
+    display:flex!important;
+  }
+  header.nav nav a{
+    display:block!important;
+    padding:8px 0!important;
+    width:100%!important;
+  }
+}
+</style>
+
+
+
+
+<style id="clear-logo-final">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:260px!important;
+  height:auto!important;
+  max-width:260px!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="spaced-chip-ai-brand">
+/* Brand spacing: CHIP / AI / LABS remain visually distinct. */
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:260px!important;
+  height:auto!important;
+  max-width:260px!important;
+  object-fit:contain!important;
+}
+.brand, header .brand, .navbar .brand{
+  letter-spacing:.01em!important;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="final-brand-website">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  height:auto!important;
+  max-width:270px!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+header.nav{
+  gap:14px!important;
+}
+@media(max-width:720px){
+  header.nav{
+    gap:8px!important;
+  }
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="chipai-brand-final">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  height:auto!important;
+  max-width:270px!important;
+  background:transparent!important;
+  object-fit:contain!important;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="supplied-brand-visuals">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  height:auto!important;
+  max-width:270px!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+.supplied-chip-visual{
+  position:absolute;
+  right:7%;
+  top:50%;
+  transform:translateY(-50%);
+  width:min(360px,34vw);
+  z-index:0;
+  pointer-events:none;
+  filter:drop-shadow(0 0 28px rgba(25,190,255,.22));
+}
+.supplied-chip-visual img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  opacity:.92;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+  .supplied-chip-visual{
+    position:relative;
+    right:auto;
+    top:auto;
+    transform:none;
+    width:72%;
+    max-width:280px;
+    margin:28px auto 0;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+  .supplied-chip-visual{
+    width:78%;
+  }
+}
+</style>
+
+
+
+
+<style id="transparent-clear-brand-final">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  height:auto!important;
+  max-width:270px!important;
+  object-fit:contain!important;
+  background:transparent!important;
+  filter:drop-shadow(0 0 8px rgba(24,205,255,.10));
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="latest-logo-final">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  max-width:270px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  background:transparent!important;
+  filter:drop-shadow(0 0 7px rgba(24,205,255,.10));
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+
+
+<style id="reference-logo-layout">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:250px!important;
+  max-width:250px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  background:transparent!important;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:165px!important;
+    max-width:165px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:145px!important;
+    max-width:145px!important;
+  }
+}
+</style>
+
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<style id="regenerated-logo-polish">
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:270px!important;
+  max-width:270px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  background:transparent!important;
+  filter:drop-shadow(0 0 8px rgba(20,210,255,.12));
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:168px!important;
+    max-width:168px!important;
+    height:auto!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:148px!important;
+    max-width:148px!important;
+  }
+}
+</style>
+
+
+<style id="logo-visibility-final">
+/* Clearer brand presentation on the dark background */
+.brand img, header .brand img, .navbar .brand img{
+  display:block!important;
+  width:292px!important;
+  max-width:292px!important;
+  height:auto!important;
+  object-fit:contain!important;
+  background:transparent!important;
+  filter:contrast(1.06) brightness(1.06) drop-shadow(0 0 9px rgba(35,215,255,.14));
+}
+.brand-tagline{
+  margin-top:18px!important;
+  color:rgba(238,247,255,.90)!important;
+  font-size:clamp(11px,1.15vw,15px)!important;
+  font-weight:600!important;
+  letter-spacing:.16em!important;
+  line-height:1.6!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:720px){
+  header.nav .brand img{
+    width:178px!important;
+    max-width:178px!important;
+  }
+  .brand-tagline{
+    margin-top:14px!important;
+    font-size:10px!important;
+    letter-spacing:.11em!important;
+  }
+}
+@media(max-width:360px){
+  header.nav .brand img{
+    width:156px!important;
+    max-width:156px!important;
+  }
+  .brand-tagline{
+    font-size:9px!important;
+  }
+}
+</style>
+
+
+<style id="linkedin-link-style">
+.linkedin-link-wrap{
+  margin-top:18px;
+}
+.linkedin-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  color:#dff8ff!important;
+  text-decoration:none!important;
+  border:1px solid rgba(35,210,255,.32)!important;
+  background:rgba(8,30,50,.55)!important;
+  border-radius:999px!important;
+  padding:9px 15px!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.04em!important;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease!important;
+}
+.linkedin-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(35,220,255,.75)!important;
+  box-shadow:0 0 20px rgba(35,210,255,.16)!important;
+}
+</style>
+
+
+<style id="linkedin-next-to-email-style">
+/* LinkedIn sits directly to the right of the email contact. */
+.linkedin-next-to-email{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  margin-left:10px!important;
+  vertical-align:middle!important;
+  padding:10px 16px!important;
+  border:1px solid rgba(35,210,255,.35)!important;
+  border-radius:999px!important;
+  background:rgba(8,30,50,.65)!important;
+  color:#eafaff!important;
+  text-decoration:none!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.03em!important;
+  white-space:nowrap!important;
+}
+.linkedin-next-to-email:hover{
+  border-color:rgba(35,220,255,.8)!important;
+  box-shadow:0 0 18px rgba(35,210,255,.15)!important;
+  transform:translateY(-1px)!important;
+}
+@media(max-width:720px){
+  .linkedin-next-to-email{
+    margin-left:8px!important;
+    padding:9px 13px!important;
+    font-size:12px!important;
+  }
+}
+@media(max-width:430px){
+  .linkedin-next-to-email{
+    margin-left:6px!important;
+    padding:8px 11px!important;
+    font-size:11px!important;
+  }
+}
+</style>
+
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="ChipAI LABS home">
+      <img class="brand-logo" src="assets/chip-ai-labs-logo.png" alt="ChipAI LABS">
+    </a>
+
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <a class="mobile-build-cta" href="#connect">Let’s Build <span aria-hidden="true">→</span></a>
+<nav><a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#solutions">Solutions</a>
+<a href="#training">Training</a></nav>
+    <a class="nav-build" href="#connect">Let's Build <span>↗</span></a>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+<div class="supplied-chip-visual" aria-hidden="true">
+  <img src="assets/chip-ai-lab-chip-visual.png" alt="">
+</div>
+
+      <div class="hero-copy">
+        <div class="eyebrow">AI × SEMICONDUCTORS × INNOVATION</div>
+        <h1>Designing <span>Intelligence.</span><br>Powering Tomorrow.</h1>
+        <p class="lead">
+          Building the next generation of AI and chip technology through practical
+          engineering, learning and innovation.
+        </p>
+
+        <div class="coming">
+          <span class="pulse"></span>
+          <strong>COMING SOON</strong>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Stay Connected</a>
+          <a class="btn ghost" href="#solutions">Explore</a>
+        </div>
+
+        <div class="domain">chipailabs.in</div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="circuit c1"></div>
+        <div class="circuit c2"></div>
+        <div class="chip">
+          <div class="chip-inner">
+            <div class="chip-logo">C</div>
+            <div class="chip-title">CHIP<br><span>AI LABS</span></div>
+            <div class="chip-core">
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <small>AI, SEMICONDUCTORS & DEEP TECH SOLUTIONS</small>
+          </div>
+          <div class="pins top"></div>
+          <div class="pins bottom"></div>
+          <div class="pins left"></div>
+          <div class="pins right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="two-col">
+        <div>
+          <h2>Where <span>chips</span> meet intelligence.</h2>
+        </div>
+        <div>
+          <p>
+            ChipAI LABS is being built around the intersection of semiconductor
+            engineering and artificial intelligence. Our goal is to turn strong
+            technical ideas into useful products, learning experiences and
+            real-world engineering solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section">
+      <div class="section-label">02 / SOLUTIONS</div>
+      <h2>Technology with <span>purpose.</span></h2>
+      <p class="section-intro">Engineering solutions for AI, semiconductor and digital technology challenges.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">▣</div>
+          <h3>VLSI &amp; Chip Design</h3>
+          <p>Digital design, RTL, verification and semiconductor-focused engineering.</p>
+        </article>
+        <article class="card">
+          <div class="icon">✦</div>
+          <h3>AI Engineering</h3>
+          <p>AI-driven tools, intelligent workflows and practical machine-learning solutions.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⌁</div>
+          <h3>Engineering Solutions</h3>
+          <p>Practical technical solutions, automation and innovation for real-world requirements.</p>
+        </article>
+        <article class="card">
+          <div class="icon">↗</div>
+          <h3>Innovation &amp; R&amp;D</h3>
+          <p>Turning ideas into prototypes, experiments and future-ready products.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="training" class="section training">
+      <div class="section-label">03 / TRAINING</div>
+      <div class="two-col training-head">
+        <div>
+          <h2>Learn. <span>Build.</span> Grow.</h2>
+        </div>
+        <div>
+          <p>
+            Hands-on learning designed around practical engineering, technical
+            confidence and industry readiness.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-grid">
+        <div class="training-card">
+          <span>01</span>
+          <h3>VLSI Training</h3>
+          <p>Build strong foundations in digital design, RTL, verification and chip development.</p>
+        </div>
+        <div class="training-card">
+          <span>02</span>
+          <h3>AI &amp; Technology</h3>
+          <p>Learn practical AI concepts and apply them to engineering workflows and projects.</p>
+        </div>
+        <div class="training-card">
+          <span>03</span>
+          <h3>Mock Interviews</h3>
+          <p>Practice technical interviews with structured feedback and real-world preparation.</p>
+        </div>
+        <div class="training-card">
+          <span>04</span>
+          <h3>1:1 Mentorship</h3>
+          <p>Get focused guidance for projects, skills, career direction and technical growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products">
+      <div class="section-label">04 / PRODUCTS</div>
+      <div class="product-panel">
+        <div>
+          <div class="product-status"><span></span> BUILDING THE FUTURE</div>
+          <h2>Products that make <span>engineering smarter.</span></h2>
+          <p>
+            ChipAI LABS is working toward AI-powered products and technology
+            platforms that connect intelligence with semiconductor and engineering workflows.
+          </p>
+        </div>
+        <div class="product-list">
+          <div><b>AI TOOLS</b><span>Intelligent engineering workflows</span></div>
+          <div><b>CHIP TECH</b><span>Semiconductor-focused solutions</span></div>
+          <div><b>AUTOMATION</b><span>Faster, smarter technical processes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="section vision">
+      <div class="section-label">05 / VISION</div>
+      <div class="vision-box">
+        <p class="quote">“The future belongs to those who build it.”</p>
+        <div class="vision-grid">
+          <div><b>LEARN</b><span>Build deep technical foundations.</span></div>
+          <div><b>BUILD</b><span>Create practical solutions.</span></div>
+          <div><b>GROW</b><span>Turn engineering into impact.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect" class="section connect">
+      <div class="section-label">06 / CONNECT &amp; CAREERS
+
+</div>
+      <div class="connect-wrap">
+        <div class="connect-copy">
+          <h2>Something <span>big</span> is coming.</h2>
+          <p>Stay tuned for the ChipAI LABS launch.</p>
+          <a class="btn primary" href="mailto:hello@chipailabs.in">hello@chipailabs.in</a>
+<a class="linkedin-link linkedin-next-to-email"
+   href="https://www.linkedin.com/company/chip-ai-labs/"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="CHIP AI LABS on LinkedIn">
+  LinkedIn <span aria-hidden="true">↗</span>
+</a>
+          <div class="contact-domain">chipailabs.in</div>
+        </div>
+        <div class="career-card">
+          <div class="career-kicker">CAREERS</div>
+          <h3>Build the future with us.</h3>
+          <div class="career-status">HIRING SOON</div>
+          <p>Career opportunities at ChipAI LABS will be announced soon. Stay connected for upcoming opportunities.</p>
+          <div class="career-art" aria-hidden="true">
+            <div class="career-chip"><span></span><span></span><span></span><span></span></div>
+            <div class="career-ring r1"></div><div class="career-ring r2"></div>
+            <i class="cdot cda"></i><i class="cdot cdb"></i><i class="cdot cdc"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> ChipAI LABS</span>
+    <span>DESIGNING INTELLIGENCE. POWERING TOMORROW.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
