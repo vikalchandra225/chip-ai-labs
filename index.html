@@ -619,7 +619,73 @@ header.nav{
 </style>
 
 
+<style id="linkedin-link-style">
+.linkedin-link-wrap{
+  margin-top:18px;
+}
+.linkedin-link{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  color:#dff8ff!important;
+  text-decoration:none!important;
+  border:1px solid rgba(35,210,255,.32)!important;
+  background:rgba(8,30,50,.55)!important;
+  border-radius:999px!important;
+  padding:9px 15px!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.04em!important;
+  transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease!important;
+}
+.linkedin-link:hover{
+  transform:translateY(-2px);
+  border-color:rgba(35,220,255,.75)!important;
+  box-shadow:0 0 20px rgba(35,210,255,.16)!important;
+}
+</style>
 
+
+<style id="linkedin-next-to-email-style">
+/* LinkedIn sits directly to the right of the email contact. */
+.linkedin-next-to-email{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  margin-left:10px!important;
+  vertical-align:middle!important;
+  padding:10px 16px!important;
+  border:1px solid rgba(35,210,255,.35)!important;
+  border-radius:999px!important;
+  background:rgba(8,30,50,.65)!important;
+  color:#eafaff!important;
+  text-decoration:none!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.03em!important;
+  white-space:nowrap!important;
+}
+.linkedin-next-to-email:hover{
+  border-color:rgba(35,220,255,.8)!important;
+  box-shadow:0 0 18px rgba(35,210,255,.15)!important;
+  transform:translateY(-1px)!important;
+}
+@media(max-width:720px){
+  .linkedin-next-to-email{
+    margin-left:8px!important;
+    padding:9px 13px!important;
+    font-size:12px!important;
+  }
+}
+@media(max-width:430px){
+  .linkedin-next-to-email{
+    margin-left:6px!important;
+    padding:8px 11px!important;
+    font-size:11px!important;
+  }
+}
+</style>
 
 </head>
 <body>
@@ -643,7 +709,9 @@ header.nav{
 
   <main>
     <section id="home" class="hero">
-
+<div class="supplied-chip-visual" aria-hidden="true">
+  <img src="assets/chip-ai-lab-chip-visual.png" alt="">
+</div>
 
       <div class="hero-copy">
         <div class="eyebrow">AI × SEMICONDUCTORS × INNOVATION</div>
@@ -806,12 +874,21 @@ header.nav{
     </section>
 
     <section id="connect" class="section connect">
-      <div class="section-label">06 / CONNECT &amp; CAREERS</div>
+      <div class="section-label">06 / CONNECT &amp; CAREERS
+
+</div>
       <div class="connect-wrap">
         <div class="connect-copy">
           <h2>Something <span>big</span> is coming.</h2>
           <p>Stay tuned for the ChipAI LABS launch.</p>
           <a class="btn primary" href="mailto:hello@chipailabs.in">hello@chipailabs.in</a>
+<a class="linkedin-link linkedin-next-to-email"
+   href="https://www.linkedin.com/company/chip-ai-labs/"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="CHIP AI LABS on LinkedIn">
+  LinkedIn <span aria-hidden="true">↗</span>
+</a>
           <div class="contact-domain">chipailabs.in</div>
         </div>
         <div class="career-card">
